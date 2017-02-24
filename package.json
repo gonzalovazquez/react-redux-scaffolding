@@ -1,0 +1,112 @@
+{
+  "name": "react-redux-scaffolding",
+  "version": "0.0.0",
+  "description": "A scaffolding application that uses React, Redux and Material UI",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gonzalovazquez/react-redux-scaffolding/"
+  },
+  "author": {
+    "name": "Gonzalo Vazquez",
+    "email": "gonzalovazquez010@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gonzalovazquez/react-redux-scaffolding/issues"
+  },
+  "homepage": "https://github.com/gonzalovazquez/react-redux-scaffolding/#readme",
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-jest": "^18.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-lodash": "^3.2.8",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.9.0",
+    "file-loader": "^0.9.0",
+    "image-webpack-loader": "^3.2.0",
+    "jest": "^18.1.0",
+    "react-test-renderer": "^15.4.2",
+    "redux-devtools": "^3.3.2",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.2.0",
+    "style-loader": "^0.13.1",
+    "typings": "^1.3.2",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "aphrodite": "^0.5.0",
+    "axios": "^0.15.3",
+    "classnames": "^2.2.5",
+    "eslint-loader": "^1.6.1",
+    "github-markdown-css": "^2.4.0",
+    "hammerjs": "^2.0.8",
+    "highlight.js": "^9.6.0",
+    "jquery": "^2.2.4",
+    "js-yaml": "^3.6.1",
+    "lodash": "^4.15.0",
+    "marked": "^0.3.6",
+    "material-ui": "^0.16.7",
+    "materialize-css": "^0.97.7",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-dropzone": "^3.10.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^3.0.2",
+    "react-router-redux": "^4.0.7",
+    "react-svg-loader": "^1.1.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-treeview": "^0.4.6",
+    "redux": "^3.5.2",
+    "redux-form": "^6.5.0",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0",
+    "webpack-strip": "^0.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "plugins": [
+      "lodash",
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "root": true,
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "$": true
+    },
+    "rules": {
+      "react/jsx-space-before-closing": "off",
+      "no-return-assign": "off",
+      "react/require-extension": "off"
+    }
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "dist": "NODE_ENV=production webpack --progress",
+    "test": "npm run-script lint",
+    "webpack-watch": "webpack --watch",
+    "serve": "webpack-dev-server",
+    "lint": "eslint .",
+    "prepublish": "npm run dist"
+  }
+}
