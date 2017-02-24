@@ -42,11 +42,7 @@ To build a distribution:
 
 ## Feature List
 
-- [X] Docker Container
-- [X] OAuth Registration
-- [ ] API Configuration
-- [ ] API Certification
-- [ ] Upgrade to Webpack 2
+- [] Improve documentation
 
 ## Release Notes
 
