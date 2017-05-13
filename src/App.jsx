@@ -10,7 +10,6 @@ import store from './store';
 // Components
 import Dashboard from './components/Dashboard/Dashboard';
 import Container from './components/Container/Container';
-import MainBar from './components/MainBar/MainBar';
 import Profile from './components/Profile/Profile';
 
 // Create an enhanced history that syncs navigation events with the store
@@ -29,7 +28,6 @@ const style = StyleSheet.create({
 const App = () => (
   <Provider store={store}>
     <app className={css(style.app)}>
-      <MainBar />
       <Router history={history}>
         <Route path="/" component={Container}>
           <IndexRoute component={Dashboard}/>
