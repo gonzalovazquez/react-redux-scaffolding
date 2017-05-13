@@ -1,6 +1,6 @@
 {
   "name": "react-redux-scaffolding",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A scaffolding application that uses React, Redux and Material UI",
   "main": "index.html",
   "repository": {
