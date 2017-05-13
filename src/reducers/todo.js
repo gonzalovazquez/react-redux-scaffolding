@@ -1,3 +1,7 @@
+/**
+ * initialState
+ * Object that defines the initial state.
+ */
 const initialState = {
     todo: {},
     hasErrored: false,
