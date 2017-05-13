@@ -2,10 +2,10 @@ import { routerReducer } from 'react-router-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
-import authenticated from './reducers/authenticated';
+import todo from './reducers/todo';
 
 const reducers = { 
-    authenticated
+    todo
   };
 
 const store = createStore(
