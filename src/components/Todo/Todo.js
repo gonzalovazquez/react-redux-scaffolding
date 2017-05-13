@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router'
-
-const style = StyleSheet.create({
-  //Styles go here
-});
 
 class Todo extends Component {
     render(){
@@ -18,5 +15,9 @@ class Todo extends Component {
       </div>)
     }
 }
+
+Todo.propTypes = {
+  todos: PropTypes.array,
+};
 
 export default Todo;

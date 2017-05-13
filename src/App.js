@@ -8,6 +8,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import store from './store';
 
 // Components
+import Container from './components/Container/Container';
 import Todo from './components/Todo/Todo';
 
 // Create an enhanced history that syncs navigation events with the store
