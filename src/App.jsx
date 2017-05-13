@@ -8,9 +8,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import store from './store';
 
 // Components
-import Dashboard from './components/Dashboard/Dashboard';
-import Container from './components/Container/Container';
-import Profile from './components/Profile/Profile';
+import Todo from './components/Todo/Todo';
 
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store);
@@ -30,8 +28,7 @@ const App = () => (
     <app className={css(style.app)}>
       <Router history={history}>
         <Route path="/" component={Container}>
-          <IndexRoute component={Dashboard}/>
-          <Route path="profile" component={Profile} />
+          <IndexRoute component={Todo} />
         </Route>
     </Router>
     </app>
