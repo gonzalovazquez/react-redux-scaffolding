@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux'
+import { syncHistoryWithStore } from 'react-router-redux';
 
 // STORE
 import store from './store';
@@ -21,7 +21,7 @@ const style = StyleSheet.create({
     flexDirection: 'column',
     flex: '1 0 auto',
     width: '90%',
-  }
+  },
 });
 
 const App = () => (
@@ -31,7 +31,7 @@ const App = () => (
         <Route path="/" component={Container}>
           <IndexRoute component={Todo} />
         </Route>
-    </Router>
+      </Router>
     </app>
   </Provider>
 );

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Container({ children }) {
   return (
@@ -6,4 +7,8 @@ export default function Container({ children }) {
         {children}
     </div>
   )
+};
+
+Container.PropTypes = {
+  children: React.object,
 };
