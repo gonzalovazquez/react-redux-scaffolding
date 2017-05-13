@@ -106,7 +106,14 @@
     "test": "npm run-script lint",
     "webpack-watch": "webpack --watch",
     "serve": "webpack-dev-server",
-    "lint": "eslint .",
-    "prepublish": "npm run dist"
-  }
+    "lint-watch": " node ./node_modules/eslint-watch/bin/esw -w --ext .js src",
+    "lint": " node ./node_modules/eslint-watch/bin/esw --ext .js src",
+    "prepublish": "npm run build",
+    "validate": "npm ls",
+    "doc": "esdoc -c esdoc.json"
+  },
+  "pre-commit": [
+    "lint",
+    "build"
+  ]
 }
