@@ -9,13 +9,17 @@ import { fetchListofTodos } from '../../action/todo';
  * @class Todo
  * @extends {Component}
  */
-class Todo extends Component {
+let Todo = class Todo extends Component {
   /**
    * Fetches todo onLoad.
    */
   componentDidMount() {
     this.props.getTodos();
   }
+  /**
+   * Returns lists of todos my iterating over array.
+   * @return {ReactElement} markup
+   */
   render() {
     return (
       <div>
@@ -69,4 +73,6 @@ Todo.propTypes = {
 /**
  * Connects to Redux.
  */
-export default connect(mapStateToProps, mapDispatchToProps)(Todo);
+Todo = connect(mapStateToProps, mapDispatchToProps)(Todo);
+export default Todo;
+

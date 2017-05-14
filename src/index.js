@@ -8,7 +8,8 @@ import './index.css';
 import App from './App';
 
 /**
- * Root module with Material Design Theme.
+ * Root
+ * @return {ReactElement} Main App.
  */
 const Root = () => (
   <MuiThemeProvider>
