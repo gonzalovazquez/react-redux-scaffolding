@@ -7,6 +7,9 @@ import './index.css';
 // Components:
 import App from './App';
 
+/**
+ * Root module with Material Design Theme.
+ */
 const Root = () => (
   <MuiThemeProvider>
     <App />
@@ -17,6 +20,9 @@ const Root = () => (
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
+/**
+ * Initial bootstrap
+ */
 ReactDOM.render(
   <Root />,
   document.getElementById('content')

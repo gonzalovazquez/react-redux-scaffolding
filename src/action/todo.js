@@ -45,14 +45,13 @@ export function fetchListofTodos() {
     dispatch(todoIsLoading(true));
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then((res) => {
-      return res.json();
+      res.json();
     })
     .then((response) => {
       dispatch(todoIsLoading(false));
       dispatch(todoIsSuccessful(response));
     })
-    .catch((error) => {
-      console.error(error);
+    .catch(() => {
       dispatch(todoIsLoading(false));
       dispatch(todohasError(true));
     });

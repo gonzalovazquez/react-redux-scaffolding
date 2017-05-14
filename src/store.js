@@ -4,10 +4,11 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import todo from './reducers/todo';
 
-const reducers = { 
-    todo
-  };
-
+const reducers = { todo };
+/**
+ * Create store we our reducers defined above.
+ * We include thunk to handle requests and Redux DevTools;
+ */
 const store = createStore(
   combineReducers({ ...reducers,
     routing: routerReducer,

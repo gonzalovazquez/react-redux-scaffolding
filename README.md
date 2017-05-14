@@ -46,5 +46,8 @@ To build a distribution:
 
 ## Release Notes
 
+### 1.0.0
+- Added documentation and working demo
+
 ### 0.0.1
 - Initial release of scaffolding.

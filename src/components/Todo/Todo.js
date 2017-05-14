@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
 import { fetchListofTodos } from '../../action/todo';
 
 /**
- * Todo Component
+ * Todo Component.
+ * Fetches and displays todos in a list.
  * @class Todo
  * @extends {Component}
  */
@@ -21,7 +21,8 @@ class Todo extends Component {
       <div>
         <h1>All Todos:</h1>
         <ol>
-          {this.props.todos.map((value, index) => (
+          {this.props.isLoading ? <p>Loading...</p> :
+          this.props.todos.map((value, index) => (
             <li key={index}>
               <span>{value.userId} : </span>
               {value.title}
@@ -58,7 +59,7 @@ const mapDispatchToProps = (dispatch) => ({
  * @property {boolean} isLoading - Flag when request is loading.
  * @property {function} getTodos - Function to fetch todos.
  */
-Todo.PropTypes = {
+Todo.propTypes = {
   todos: PropTypes.array,
   hasError: PropTypes.bool,
   isLoading: PropTypes.bool,

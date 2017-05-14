@@ -3,12 +3,15 @@
   "extends": "airbnb",
   "rules": {
     "max-len": [1, 120, 2, {"ignoreComments": true}],
-     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-underscore-dangle": [0, { "allowAfterThis": true }]
   },
   "globals": {
     "$": true,
     "document": true,
     "window": true,
-    "localStorage": true
+    "localStorage": true,
+    "PropTypes": true,
+    "fetch": true
   }
 }

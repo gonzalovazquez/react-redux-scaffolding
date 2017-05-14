@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 export default function Container({ children }) {
   return (
     <div>
-        {children}
+      {children}
     </div>
-  )
-};
+  );
+}
 
-Container.PropTypes = {
-  children: React.object,
+Container.propTypes = {
+  children: PropTypes.object,
 };
