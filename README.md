@@ -51,7 +51,7 @@ To build a distribution:
 
 ## Feature List
 
-- [] Improve documentation
+- [X] Improve documentation
 
 ## Release Notes
 

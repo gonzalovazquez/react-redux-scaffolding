@@ -44,9 +44,9 @@ export function fetchListofTodos() {
     dispatch(todohasError(false));
     dispatch(todoIsLoading(true));
     fetch('https://jsonplaceholder.typicode.com/todos')
-    .then((res) => {
-      res.json();
-    })
+    .then((res) =>
+      res.json()
+    )
     .then((response) => {
       dispatch(todoIsLoading(false));
       dispatch(todoIsSuccessful(response));
