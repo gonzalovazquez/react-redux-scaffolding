@@ -36,7 +36,7 @@ let Todo = class Todo extends Component {
       </div>
     );
   }
-}
+};
 
 /**
  * Connects todo state to properties
@@ -74,5 +74,5 @@ Todo.propTypes = {
  * Connects to Redux.
  */
 Todo = connect(mapStateToProps, mapDispatchToProps)(Todo);
-export default Todo;
 
+export default Todo;

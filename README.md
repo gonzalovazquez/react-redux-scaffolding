@@ -22,6 +22,16 @@ To run for development:
 
 `npm start`
 
+To create documentation:
+
+`npm run doc`
+
+and then open a server pointing at dist/esdoc/index.html
+
+To lint project
+
+`npm run lint`
+
 
 ### Running Tests
 

@@ -13,7 +13,7 @@ import Todo from './components/Todo/Todo';
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store);
 
-const style = {
+const styles = {
   main: {
     marginTop: '5vh',
     display: 'flex',
