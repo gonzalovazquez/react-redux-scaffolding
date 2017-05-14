@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchListofTodos } from '../../action/todo';
 
 /**
- * Todo Component.
+ * Todo
  * Fetches and displays todos in a list.
  * @class Todo
  * @extends {Component}

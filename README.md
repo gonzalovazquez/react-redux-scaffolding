@@ -22,6 +22,7 @@ To run for development:
 
 `npm start`
 
+
 ### Running Tests
 
 @TODO: Add tests
@@ -37,8 +38,6 @@ To build a distribution:
 * [React](https://facebook.github.io/react/)
 * [Redux](https://github.com/reactjs/redux)
 * [Material-UI](http://www.material-ui.com/#/)
-* [Materialize CSS](http://materializecss.com/)
-* [Hello.js](https://adodson.com/hello.js/)
 
 ## Feature List
 
