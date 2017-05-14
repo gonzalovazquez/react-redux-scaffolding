@@ -3,9 +3,10 @@
  * Object that defines the initial state.
  */
 const initialState = {
-  todo: {},
+  todos: [],
   hasErrored: false,
   isLoading: false,
+  isSuccessful: false,
 };
 
 /**
@@ -15,7 +16,10 @@ const initialState = {
  * @return {object} A new immutable state.
  */
 export default function todo(state = initialState, action) {
-  const newState = state;
+  /**
+   * We set newState equal to all the properties of current state.
+   */
+  const newState = { ...state };
   switch (action.type) {
     case 'TODO_IS_LOADING':
       newState.isLoading = action.isLoading;
@@ -24,7 +28,12 @@ export default function todo(state = initialState, action) {
       newState.hasErrored = action.hasErrored;
       return newState;
     case 'TODO_IS_SUCCESSFUL':
-      newState.todo = Object.assign({}, state, action.items);
+      /**
+       * We want to avoid mutating the original array.
+       * What we do is concatinate to the copy and avoid mutation.
+       * http://redux.js.org/docs/recipes/reducers/ImmutableUpdatePatterns.html
+       */
+      newState.todos = newState.todos.concat(action.items);
       return newState;
     default:
       return newState;

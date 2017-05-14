@@ -40,17 +40,19 @@ export function todoIsSuccessful(items) {
  * @return {function} Triggers action creators
  */
 export function fetchListofTodos() {
-  dispatch(todohasError(false));
   return (dispatch) => {
+    dispatch(todohasError(false));
     dispatch(todoIsLoading(true));
     fetch('https://jsonplaceholder.typicode.com/todos')
     .then((res) => {
-      console.log(res);
+      return res.json();
+    })
+    .then((response) => {
       dispatch(todoIsLoading(false));
-      dispatch(todoIsSuccessful(res.items));
+      dispatch(todoIsSuccessful(response));
     })
     .catch((error) => {
-      console.error(res);
+      console.error(error);
       dispatch(todoIsLoading(false));
       dispatch(todohasError(true));
     });

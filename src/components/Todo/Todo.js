@@ -2,22 +2,70 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
+import { fetchListofTodos } from '../../action/todo';
 
-
+/**
+ * Todo Component
+ * @class Todo
+ * @extends {Component}
+ */
 class Todo extends Component {
+  /**
+   * Fetches todo onLoad.
+   */
+  componentDidMount() {
+    this.props.getTodos();
+  }
   render() {
     return (
       <div>
-        <h1>Hello</h1>
+        <h1>All Todos:</h1>
+        <ol>
+          {this.props.todos.map((value, index) => (
+            <li key={index}>
+              <span>{value.userId} : </span>
+              {value.title}
+            </li>
+          ))}
+        </ol>
       </div>
     );
   }
 }
 
-Todo.propTypes = {
+/**
+ * Connects todo state to properties
+ * @param {object} state - User state.
+ */
+const mapStateToProps = (state) => ({
+  hasError: state.todo.hasErrored,
+  isLoading: state.todo.isLoading,
+  todos: state.todo.todos,
+});
+
+/**
+ * Event for retriving Todos
+ * @param {function} dispatch - Fires event.
+ */
+const mapDispatchToProps = (dispatch) => ({
+  getTodos: () => dispatch(fetchListofTodos()),
+});
+
+/**
+ * propTypes
+ * @property {array} todos - Array of all the todos.
+ * @property {boolean} hasError - Flag if there is an error.
+ * @property {boolean} isLoading - Flag when request is loading.
+ * @property {function} getTodos - Function to fetch todos.
+ */
+Todo.PropTypes = {
   todos: PropTypes.array,
+  hasError: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  getTodos: PropTypes.func,
 };
 
-
-
-export default Todo;
+/**
+ * Connects to Redux.
+ */
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);
