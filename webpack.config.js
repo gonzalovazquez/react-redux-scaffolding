@@ -70,6 +70,10 @@ if (process.env.NODE_ENV === 'production') {
       {
         test: /\.js$/, 
         loader: "webpack-strip?strip[]=debug,strip[]=console.log" 
+      },
+      {
+        test: /\.json$/,
+        loader: 'json',
       }
   ];
 } else {
@@ -87,17 +91,16 @@ if (process.env.NODE_ENV === 'production') {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file-loader?name=font/[name].[hash].[ext]',
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader'
-      // },
       {
         test: /\.(jpeg|jpg|png|gif|svg)$/i,
         loaders: [
             'file?hash=sha512&digest=hex&name=[hash].[ext]',
             'image-webpack?bypassOnDebug'
         ]
+      },
+      {
+        test: /\.json$/,
+        loader: 'json',
       }
   ];
 }
