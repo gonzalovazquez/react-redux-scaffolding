@@ -51,6 +51,8 @@ To build a distribution:
 
 ## Feature List
 
+- [ ] Connect with TravisCI
+- [ ] Add unit tests
 - [X] Improve documentation
 
 ## Release Notes
