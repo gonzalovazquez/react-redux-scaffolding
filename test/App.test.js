@@ -1,21 +1,15 @@
-import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import chai from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import { mount, render, shallow } from 'enzyme';
+
 import App from '../src/App';
 
-describe("A suite", function() {
-  it("contains spec with an expectation", function() {
-    expect(shallow(<App />).contains(<div className="foo" />)).toBe(true);
-  });
+chai.use(chaiEnzyme()) // Note the invocation at the end
 
-  it("contains spec with an expectation", function() {
-    expect(shallow(<App />).is('.foo')).toBe(true);
-  });
+const it = render(<App />);
 
-  it("contains spec with an expectation", function() {
-    expect(mount(<App />).find('.foo').length).toBe(1);
-  });
-
-  it("can run an expectation with render", function() {
-    expect(render(<App />).find('.foo').length).toBe(1);
+describe('App component', () => {
+  it('contains Todo Component', (wrapper) => {
+     expect(wrapper.find('#todo')).to.exist;
   });
 });

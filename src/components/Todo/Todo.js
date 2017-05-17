@@ -22,7 +22,7 @@ let Todo = class Todo extends Component {
    */
   render() {
     return (
-      <div>
+      <div className="todo">
         <h1>All Todos:</h1>
         <ol>
           {this.props.isLoading ? <p>Loading...</p> :
