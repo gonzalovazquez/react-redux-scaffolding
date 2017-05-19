@@ -57,7 +57,7 @@ if (process.env.NODE_ENV === 'production') {
         loader: 'style-loader!css-loader',
       },
       {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file-loader?name=font/[name].[hash].[ext]',
       },
       {
@@ -88,7 +88,7 @@ if (process.env.NODE_ENV === 'production') {
         loader: 'style-loader!css-loader',
       },
       {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file-loader?name=font/[name].[hash].[ext]',
       },
       {
