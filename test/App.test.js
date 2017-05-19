@@ -1,15 +1,15 @@
-import chai from 'chai';
-import chaiEnzyme from 'chai-enzyme';
-import { mount, render, shallow } from 'enzyme';
+// import React from 'react';
+// import chai from 'chai';
+// import chaiEnzyme from 'chai-enzyme';
+// import { mount, render, shallow } from 'enzyme';
 
-import App from '../src/App';
+// chai.use(chaiEnzyme()) // Note the invocation at the end
 
-chai.use(chaiEnzyme()) // Note the invocation at the end
+// import Todo from '../src/components/Todo/Todo';
 
-const it = render(<App />);
-
-describe('App component', () => {
-  it('contains Todo Component', (wrapper) => {
-     expect(wrapper.find('#todo')).to.exist;
-  });
-});
+// describe('<Foo />', () => {
+//   it('calls componentDidMount', () => {
+//     const wrapper = shallow(<Todo />);
+//     expect(Foo.prototype.componentDidMount.calledOnce).to.equal(true);
+//   });
+// });
