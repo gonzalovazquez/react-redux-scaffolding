@@ -2,6 +2,17 @@
   "parser": "babel-eslint",
   "extends": "airbnb",
   "rules": {
-    "max-len": [1, 120, 2, {"ignoreComments": true}]
+    "max-len": [1, 120, 2, {"ignoreComments": true}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-underscore-dangle": [0, { "allowAfterThis": true }],
+    "import/no-named-as-default" : 0
+  },
+  "globals": {
+    "$": true,
+    "document": true,
+    "window": true,
+    "localStorage": true,
+    "PropTypes": true,
+    "fetch": true
   }
 }

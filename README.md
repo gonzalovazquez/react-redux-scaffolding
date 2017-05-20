@@ -22,9 +22,20 @@ To run for development:
 
 `npm start`
 
+To create documentation:
+
+`npm run doc`
+
+and then open a server pointing at dist/esdoc/index.html
+
+To lint project
+
+`npm run lint`
+
+
 ### Running Tests
 
-@TODO: Add tests
+`npm test`
 
 ### Building
 
@@ -37,14 +48,20 @@ To build a distribution:
 * [React](https://facebook.github.io/react/)
 * [Redux](https://github.com/reactjs/redux)
 * [Material-UI](http://www.material-ui.com/#/)
-* [Materialize CSS](http://materializecss.com/)
-* [Hello.js](https://adodson.com/hello.js/)
 
 ## Feature List
 
-- [] Improve documentation
+- [ ] Connect with TravisCI
+- [X] Add unit tests
+- [X] Improve documentation
 
 ## Release Notes
+
+### 1.0.1
+- Added unit tests
+
+### 1.0.0
+- Added documentation and working demo
 
 ### 0.0.1
 - Initial release of scaffolding.
