@@ -9,7 +9,7 @@ import { fetchListofTodos } from '../../action/todo';
  * @class Todo
  * @extends {Component}
  */
-let Todo = class Todo extends Component {
+export class Todo extends Component {
   /**
    * Fetches todo onLoad.
    */
@@ -36,7 +36,7 @@ let Todo = class Todo extends Component {
       </div>
     );
   }
-};
+}
 
 /**
  * Connects todo state to properties
@@ -73,4 +73,4 @@ Todo.propTypes = {
 /**
  * Connects to Redux.
  */
-export default Todo = connect(mapStateToProps, mapDispatchToProps)(Todo);
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);

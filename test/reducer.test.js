@@ -51,7 +51,7 @@ describe('todo reducer', () => {
     ).to.deep.equal({ isLoading: true });
   });
 
-  it.only('should return successful state', () => {
+  it('should return successful state', () => {
     expect(todo(initialState, { 
       type: 'TODO_IS_SUCCESSFUL', 
       items: endState.todos })
