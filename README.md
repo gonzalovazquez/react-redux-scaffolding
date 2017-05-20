@@ -35,7 +35,7 @@ To lint project
 
 ### Running Tests
 
-@TODO: Add tests
+`npm test`
 
 ### Building
 
@@ -52,10 +52,13 @@ To build a distribution:
 ## Feature List
 
 - [ ] Connect with TravisCI
-- [ ] Add unit tests
+- [X] Add unit tests
 - [X] Improve documentation
 
 ## Release Notes
+
+### 1.0.1
+- Added unit tests
 
 ### 1.0.0
 - Added documentation and working demo
