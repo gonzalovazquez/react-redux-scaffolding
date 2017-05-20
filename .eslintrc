@@ -4,7 +4,8 @@
   "rules": {
     "max-len": [1, 120, 2, {"ignoreComments": true}],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "no-underscore-dangle": [0, { "allowAfterThis": true }]
+    "no-underscore-dangle": [0, { "allowAfterThis": true }],
+    "import/no-named-as-default" : 0
   },
   "globals": {
     "$": true,
