@@ -1,4 +1,5 @@
 # React Redux Scaffolding
+![TravisCI](https://travis-ci.org/gonzalovazquez/react-redux-scaffolding.svg?branch=master)
 
 A scaffolding application that uses React, Redux and Material Design.
 
@@ -51,11 +52,14 @@ To build a distribution:
 
 ## Feature List
 
-- [ ] Connect with TravisCI
+- [X] Connect with TravisCI
 - [X] Add unit tests
 - [X] Improve documentation
 
 ## Release Notes
+
+### 1.0.2
+- Connected to TravisCI
 
 ### 1.0.1
 - Added unit tests
