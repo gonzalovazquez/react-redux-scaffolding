@@ -39,7 +39,7 @@ export function todoIsSuccessful(items) {
  * @param {object} item - Todo.
  * @return {object} New state.
  */
-export function todoRemoved(item) {
+export function removeTodoFromTodos(item) {
   return {
     type: 'TODO_TO_REMOVE',
     item,
@@ -65,15 +65,5 @@ export function fetchListofTodos() {
         dispatch(todoIsLoading(false));
         dispatch(todohasError(true));
       });
-  };
-}
-
-/**
- * Removes a TODO in list of TODOs.
- * @return {function} Triggers action creators
- */
-export function removeTodoFromTodos(todo) {
-  return (dispatch) => {
-    dispatch(todoRemoved(todo));
   };
 }
