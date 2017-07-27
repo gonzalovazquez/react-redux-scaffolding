@@ -33,7 +33,7 @@ export class Todo extends Component {
             this.props.isLoading ? <p>Loading...</p> :
               this.props.todos.map((value, index) => (
                 <li key={index} onClick={() => deleteTodo(value)}>
-                  <span>{value.userId} :</span>
+                  <span>{value.userId} : </span>
                   {value.title}
                 </li>
               )
@@ -70,6 +70,7 @@ const mapDispatchToProps = (dispatch) => ({
  * @property {boolean} hasError - Flag if there is an error.
  * @property {boolean} isLoading - Flag when request is loading.
  * @property {function} getTodos - Function to fetch todos.
+ * @property {function} removeTodo - Function to revmove Todo.
  */
 Todo.propTypes = {
   todos: PropTypes.array,
