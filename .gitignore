@@ -14,3 +14,6 @@ dist
 .env
 npm-debug.log
 .vscode
+
+# IDE
+.idea/
