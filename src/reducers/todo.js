@@ -35,6 +35,9 @@ export default function todo(state = initialState, action) {
        */
       newState.todos = newState.todos.concat(action.items);
       return newState;
+    case 'TODO_TO_REMOVE':
+      newState.todos = newState.todos.filter((itm) => itm.title !== action.item.title);
+      return newState;
     default:
       return newState;
   }
