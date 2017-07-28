@@ -35,6 +35,18 @@ export function todoIsSuccessful(items) {
 }
 
 /**
+ * Action creater that removes a todo from list of todos.
+ * @param {object} item - Todo.
+ * @return {object} New state.
+ */
+export function removeTodoFromTodos(item) {
+  return {
+    type: 'TODO_TO_REMOVE',
+    item,
+  };
+}
+
+/**
  * Fetches a fake list of TODO.
  * If there is an error, it will call the todoHasError
  * @return {function} Triggers action creators
@@ -44,16 +56,14 @@ export function fetchListofTodos() {
     dispatch(todohasError(false));
     dispatch(todoIsLoading(true));
     fetch('https://jsonplaceholder.typicode.com/todos')
-    .then((res) =>
-      res.json()
-    )
-    .then((response) => {
-      dispatch(todoIsLoading(false));
-      dispatch(todoIsSuccessful(response));
-    })
-    .catch(() => {
-      dispatch(todoIsLoading(false));
-      dispatch(todohasError(true));
-    });
+      .then((res) => res.json())
+      .then((response) => {
+        dispatch(todoIsLoading(false));
+        dispatch(todoIsSuccessful(response));
+      })
+      .catch(() => {
+        dispatch(todoIsLoading(false));
+        dispatch(todohasError(true));
+      });
   };
 }

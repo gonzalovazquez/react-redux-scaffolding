@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchListofTodos } from '../../action/todo';
+import { fetchListofTodos, removeTodoFromTodos } from '../../action/todo';
 
 /**
  * Todo
@@ -21,17 +21,24 @@ export class Todo extends Component {
    * @return {ReactElement} markup
    */
   render() {
+    const deleteTodo = (todo) => {
+      this.props.removeTodo(todo);
+    };
+
     return (
       <div className="todo">
         <h1>All Todos:</h1>
         <ol>
-          {this.props.isLoading ? <p>Loading...</p> :
-          this.props.todos.map((value, index) => (
-            <li key={index}>
-              <span>{value.userId} : </span>
-              {value.title}
-            </li>
-          ))}
+          {
+            this.props.isLoading ? <p>Loading...</p> :
+              this.props.todos.map((value, index) => (
+                <li key={index} onClick={() => deleteTodo(value)}>
+                  <span>{value.userId} : </span>
+                  {value.title}
+                </li>
+              )
+            )
+          }
         </ol>
       </div>
     );
@@ -54,6 +61,7 @@ const mapStateToProps = (state) => ({
  */
 const mapDispatchToProps = (dispatch) => ({
   getTodos: () => dispatch(fetchListofTodos()),
+  removeTodo: (todo) => dispatch(removeTodoFromTodos(todo)),
 });
 
 /**
@@ -62,12 +70,14 @@ const mapDispatchToProps = (dispatch) => ({
  * @property {boolean} hasError - Flag if there is an error.
  * @property {boolean} isLoading - Flag when request is loading.
  * @property {function} getTodos - Function to fetch todos.
+ * @property {function} removeTodo - Function to revmove Todo.
  */
 Todo.propTypes = {
   todos: PropTypes.array,
   hasError: PropTypes.bool,
   isLoading: PropTypes.bool,
   getTodos: PropTypes.func,
+  removeTodo: PropTypes.func,
 };
 
 /**
